@@ -1,0 +1,19 @@
+.post {
+  max-width: 349px;
+}
+.post-title {
+  margin-top: 22px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #2d2d2d;
+  line-height: 22px;
+}
+.post-description {
+  margin-top: 16px;
+  color: #2d2d2d;
+  line-height: 22px;
+}
+.post-category {
+  margin-top: 16px;
+  color: cadetblue;
+}/*# sourceMappingURL=PostsListItem.css.map */

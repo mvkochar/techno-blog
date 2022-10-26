@@ -1,0 +1,19 @@
+.post {
+    max-width: 349px;
+    &-title{
+        margin-top: 22px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        color: #2d2d2d;
+        line-height: 22px;
+    }
+    &-description{
+        margin-top: 16px;
+        color: #2d2d2d;
+        line-height: 22px;
+    }
+    &-category{
+        margin-top: 16px;
+        color: cadetblue;
+    } 
+}
