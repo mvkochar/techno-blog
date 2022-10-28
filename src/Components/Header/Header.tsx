@@ -6,7 +6,7 @@ import "./header.css";
 
 const Header = () => {
   return (
-    <>
+    <header>
       <SocialSearch />
       <AppBar
         className="header-bar"
@@ -40,7 +40,7 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
-    </>
+    </header>
   );
 };
 

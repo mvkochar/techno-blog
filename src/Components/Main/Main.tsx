@@ -1,10 +1,13 @@
+import { Container } from "@mui/system"
 import React from "react"
 import PostsList from "../Posts/PostsList"
 
 const Main = () => {
     return (
         <main>
-            <PostsList/>
+            <Container maxWidth ="lg">
+                <PostsList/>
+            </Container>
         </main>
     )
 }

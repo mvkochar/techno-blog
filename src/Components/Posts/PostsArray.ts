@@ -55,6 +55,30 @@ const PostsArray: Post[] = [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "global news",
   },
+  {
+  id: 7,
+    image: "./images/post1.png",
+    title: "Nullam vitae fringilla nisl. Quisque rutrum pulvinar.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
+    category: "mobile news",
+  },
+  {
+    id: 8,
+    image: "./images/post2.png",
+    title: "Sed et nunc sed nunc venenatis luctus.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
+    category: "transport news",
+  },
+  {
+    id: 9,
+    image: "./images/post3.png",
+    title: "Integer id diam odio. Ut metus orci.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
+    category: "global news",
+  }
 ];
 
 export default PostsArray;
