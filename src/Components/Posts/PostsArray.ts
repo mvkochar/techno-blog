@@ -58,7 +58,7 @@ const PostsArray: Post[] = [
   {
   id: 7,
     image: "./images/post1.png",
-    title: "Nullam vitae fringilla nisl. Quisque rutrum pulvinar.",
+    title: "Nullam vitae fringilla nisl. Quisque.",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "mobile news",

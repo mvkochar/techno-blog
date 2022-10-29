@@ -13,7 +13,8 @@ const PostsList = () => {
             direction="row"
             justifyContent="center"
             alignItems="center"
-            mt={10}
+            mt={5}
+            mb={5}
         
         >
             {PostsArray.map((post) => (
