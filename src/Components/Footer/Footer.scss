@@ -10,10 +10,27 @@
     }
     &-comments-item {
       margin-bottom: 24px;
-      .btn{
-        color: #fff;
-        font-weight: 700;
+    }
+    .btn{
+      color: #fff;
+      font-weight: 700;
+      text-transform: capitalize;
+      &-links {
+        font-weight: 300;
+        padding: 0;
+        padding-bottom: 7px;
+        text-align: left;
+        justify-content: flex-start;
       }
     }
+    
+    &-links{
+      &-list{
+        list-style-type: none;
+        li {
+          margin-bottom: 0;
+        }
 
+      }
+    }
 }

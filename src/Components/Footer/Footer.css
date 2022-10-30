@@ -12,7 +12,21 @@
 .footer-comments-item {
   margin-bottom: 24px;
 }
-.footer-comments-item .btn {
+.footer .btn {
   color: #fff;
   font-weight: 700;
+  text-transform: capitalize;
+}
+.footer .btn-links {
+  font-weight: 300;
+  padding: 0;
+  padding-bottom: 7px;
+  text-align: left;
+  justify-content: flex-start;
+}
+.footer-links-list {
+  list-style-type: none;
+}
+.footer-links-list li {
+  margin-bottom: 0;
 }/*# sourceMappingURL=Footer.css.map */
