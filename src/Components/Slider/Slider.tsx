@@ -10,13 +10,13 @@ const Slider = () => {
     <div className="slider">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
-            <img src="./images/macbook.png"></img>
+            <img src="./images/macbook.png" alt="macbook"></img>
         </SwiperSlide>
         <SwiperSlide>
-            <img src="./images/macbook.png"></img>
+            <img src="./images/teahub.jpg" alt="teahub"></img>
         </SwiperSlide>
         <SwiperSlide>
-            <img src="./images/macbook.png"></img>
+            <img src="./images/fabian.jpg" alt="fabian"></img>
         </SwiperSlide>
     
       </Swiper>
