@@ -13,7 +13,10 @@
         line-height: 22px;
     }
     &-category{
+        border: none;
+        background: none;
         margin-top: 16px;
         color: cadetblue;
+        cursor: pointer;
     } 
 }
