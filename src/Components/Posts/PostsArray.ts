@@ -10,7 +10,7 @@ const PostsArray: Post[] = [
   {
     id: 1,
     image: "./images/post1.png",
-    title: "Aenean commodo ligula eget dolor. Aenean massa",
+    title: "Aenean commodo ligula",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "mobile news",
@@ -18,7 +18,7 @@ const PostsArray: Post[] = [
   {
     id: 2,
     image: "./images/post2.png",
-    title: "Vivamus venenatis faucibus orci. Nam tincidunt, quam.",
+    title: "Vivamus venenatis faucibus",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "transport news",
@@ -26,7 +26,7 @@ const PostsArray: Post[] = [
   {
     id: 3,
     image: "./images/post3.png",
-    title: "Suspendisse commodo dignissim tellus, ac consequat ligula",
+    title: "Suspendisse commodo dignissim",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "global news",
@@ -34,7 +34,7 @@ const PostsArray: Post[] = [
   {
     id: 4,
     image: "./images/post4.png",
-    title: "Suspendisse pharetra mauris at ultricies maximus. Suspendisse.",
+    title: "Suspendisse pharetra mauris",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "mobile news",
@@ -42,7 +42,7 @@ const PostsArray: Post[] = [
   {
     id: 5,
     image: "./images/post5.png",
-    title: "Duis sapien arcu, auctor vel commodo id.",
+    title: "Duis sapien arcu",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "transport news",
@@ -50,7 +50,7 @@ const PostsArray: Post[] = [
   {
     id: 6,
     image: "./images/post6.png",
-    title: "Maecenas id nisi justo. Morbi tincidunt luctus.",
+    title: "Maecenas id nisi justo",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "global news",
@@ -58,7 +58,7 @@ const PostsArray: Post[] = [
   {
   id: 7,
     image: "./images/post1.png",
-    title: "Nullam vitae fringilla nisl. Quisque.",
+    title: "Nullam vitae fringilla",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "mobile news",
@@ -66,7 +66,7 @@ const PostsArray: Post[] = [
   {
     id: 8,
     image: "./images/post2.png",
-    title: "Sed et nunc sed nunc venenatis luctus.",
+    title: "Sed et nunc sed nunc",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "transport news",
@@ -74,7 +74,7 @@ const PostsArray: Post[] = [
   {
     id: 9,
     image: "./images/post3.png",
-    title: "Integer id diam odio. Ut metus orci.",
+    title: "Integer id diam odio",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea",
     category: "global news",

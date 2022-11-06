@@ -1,4 +1,7 @@
 .header {
+  &-link{
+    text-decoration: none;
+  }
   &-social {
     display: flex;
     justify-content:space-around;

@@ -3,6 +3,7 @@ import react from "react";
 import HeaderLogo from "./HeaderLogo";
 import SocialSearch from "./SocialSearch";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -16,9 +17,11 @@ const Header = () => {
         <Container maxWidth="lg">
           <Toolbar>
             <HeaderLogo />
-            <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
-              Home
-            </Button>
+            <Link to={"/"} className = "header-link">
+              <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
+                Home
+              </Button>
+            </Link>
             <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
               Browser
             </Button>

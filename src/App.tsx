@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <Header />
-      <Slider />
+      
       <Main categoryName= {categoryName} clickCategory = {clickCategory}/>
       <Footer/>
     </>

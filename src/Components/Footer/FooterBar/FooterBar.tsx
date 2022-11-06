@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, Button, Toolbar, Container } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const FooterBar = () => {
   return (
@@ -14,18 +15,36 @@ const FooterBar = () => {
             Design by <span>Shah Zobayer</span> Ahmed with passion and creative
             by: <span>RevoTheme</span>
           </div>
-          <Button sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}>Home</Button>
-          <Button sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}>
+          <Link to={"/"} className = {"footer-link"} >
+            <Button
+              sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}
+            >
+              Home
+            </Button>
+          </Link>
+          <Button
+            sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}
+          >
             About
           </Button>
-          <Button sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}>Faq</Button>
-          <Button sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}>
+          <Button
+            sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}
+          >
+            Faq
+          </Button>
+          <Button
+            sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}
+          >
             Contact
           </Button>
-          <Button sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}>
+          <Button
+            sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}
+          >
             Privacy
           </Button>
-          <Button sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}>
+          <Button
+            sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}
+          >
             Terms of use
           </Button>
         </Toolbar>

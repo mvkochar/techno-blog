@@ -11,43 +11,50 @@ import "./PostsListItem.css";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-
-
-
 type Props = {
   image: string;
   title: string;
   description: string;
   category: string;
+  isViewedCategoryLink ?: boolean;
   clickCategory: (name: string) => void;
 };
 
-const PostsListItem = (props: Props) => {
-  const[likedCount, setLikedCount] = React.useState(0)
+const PostsListItem = ( {image, title, description, category, isViewedCategoryLink = true, clickCategory} : Props) => {
+  const [likedCount, setLikedCount] = React.useState(0);
 
-const likeClick = () => {
-  setLikedCount(likedCount + 1) 
-}
+  const likeClick = () => {
+    setLikedCount(prevState => {
+      // Object.assign would also work
+      return prevState + 1
+    });
+  };
 
   return (
     <article>
       <Card className="post">
-        <CardMedia component="img" image={props.image} alt={props.title} />
+        <CardMedia component="img" image={image} alt={title} />
         <CardContent>
-          <div className="post-title">{props.title}</div>
-          <div className="post-description">{props.description}</div>
-          <Link to={"/category"}> <button className="post-category" onClick={()=> props.clickCategory(props.category)}>     {props.category} </button> </Link>
-        
-      
+          <div className="post-title">{title}</div>
+          <div className="post-description">{description}</div>
+          { isViewedCategoryLink && 
+          <Link to={"/category"}>
+            {" "}
+            <button
+              className="post-category"
+              onClick={() => clickCategory(category)}
+            >
+              {" "}
+              {category}{" "}
+            </button>{" "}
+          </Link> }
         </CardContent>
         <CardActions>
           <Button size="small">Learn More</Button>
           <IconButton aria-label="add to favorites" onClick={likeClick}>
             <FavoriteIcon />
           </IconButton>
-          <Typography>
-             {likedCount}
-          </Typography>
+          <Typography>{likedCount}</Typography>
         </CardActions>
       </Card>
     </article>
