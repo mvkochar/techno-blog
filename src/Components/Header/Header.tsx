@@ -5,7 +5,11 @@ import SocialSearch from "./SocialSearch";
 import "./header.css";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+type Props = {
+  clickCategory: (name: string) => void;
+}
+
+const Header = (props: Props) => {
   return (
     <header>
       <SocialSearch />
@@ -22,21 +26,21 @@ const Header = () => {
                 Home
               </Button>
             </Link>
-            <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
-              Browser
-            </Button>
-            <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
-              Graphics
-            </Button>
-            <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
-              Inspiration
-            </Button>
-            <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
-              Website
-            </Button>
-            <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
-              Templates
-            </Button>
+            <Link to={"/category"} className = "header-link">
+              <Button onClick={()=> props.clickCategory("mobile news") } sx={{ color: "#2f3032", textTransform: "uppercase" }}>
+                mobile news
+              </Button>
+            </Link>
+            <Link to={"/category"} className = "header-link">
+              <Button onClick={()=> props.clickCategory("transport news") } sx={{ color: "#2f3032", textTransform: "uppercase" }}>
+                transport news
+              </Button>
+            </Link>
+            <Link to={"/category"} className = "header-link">
+              <Button onClick={()=> props.clickCategory("global news") } sx={{ color: "#2f3032", textTransform: "uppercase" }}>
+                global news
+              </Button>
+            </Link>
             <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
               Contact us
             </Button>

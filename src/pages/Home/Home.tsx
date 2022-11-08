@@ -16,7 +16,6 @@ const Home = (props: Props) => {
         <Container maxWidth="lg">
           <PostsList
             clickCategory={props.clickCategory}
-            categoryName={props.categoryName}
           />
         </Container>
       </main>

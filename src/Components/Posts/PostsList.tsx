@@ -5,15 +5,12 @@ import PostsArray from "./PostsArray";
 
 type Props = {
   clickCategory: (name: string) => void
-  categoryName : string
 }
 
 
 
 const PostsList = (props: Props) => {
-  if(props.categoryName !== "" ) {
-     PostsArray.filter(elem => elem.category === props.categoryName)
-  }
+ 
   return (
     <>
       <Grid
@@ -26,9 +23,7 @@ const PostsList = (props: Props) => {
         mb={5}
       >
 
-        {
-          
-      
+        {   
           PostsArray.map((post) => (
             <Grid item xs={12} sm={6} md={4} key={post.id}>
               <PostsListItem

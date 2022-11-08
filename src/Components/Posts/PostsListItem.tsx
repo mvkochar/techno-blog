@@ -4,7 +4,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import "./PostsListItem.css";
@@ -20,12 +19,13 @@ type Props = {
   clickCategory: (name: string) => void;
 };
 
+
 const PostsListItem = ( {image, title, description, category, isViewedCategoryLink = true, clickCategory} : Props) => {
   const [likedCount, setLikedCount] = React.useState(0);
 
   const likeClick = () => {
     setLikedCount(prevState => {
-      // Object.assign would also work
+
       return prevState + 1
     });
   };
