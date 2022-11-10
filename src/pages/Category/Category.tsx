@@ -4,6 +4,7 @@ import PostsArray from "../../Components/Posts/PostsArray";
 import PostsListItem from "../../Components/Posts/PostsListItem";
 
 type Props = {
+  
   categoryName: string;
   clickCategory: (name: string) => void;
 };
@@ -35,6 +36,7 @@ const Category = (props: Props) => {
           ).map((post) => (
             <Grid item xs={12} sm={6} md={4} key={post.id} pt={0}>
               <PostsListItem
+                id={post.id} 
                 isViewedCategoryLink={false}
                 clickCategory={props.clickCategory}
                 image={post.image}

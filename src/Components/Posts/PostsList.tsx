@@ -27,6 +27,7 @@ const PostsList = (props: Props) => {
           PostsArray.map((post) => (
             <Grid item xs={12} sm={6} md={4} key={post.id}>
               <PostsListItem
+                id = {post.id}
                 clickCategory={props.clickCategory}
                 image={post.image}
                 title={post.title}

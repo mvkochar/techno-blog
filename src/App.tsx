@@ -10,7 +10,6 @@ function App() {
   const [categoryName, setCategoryName] = React.useState("mobile news")
 
   const clickCategory = (name: string) => {
-    console.log(name)
      setCategoryName(name)
   }   
 

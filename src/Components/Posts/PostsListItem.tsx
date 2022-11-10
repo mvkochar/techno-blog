@@ -11,22 +11,31 @@ import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 type Props = {
+  id: number;
   image: string;
   title: string;
   description: string;
   category: string;
-  isViewedCategoryLink ?: boolean;
+  isViewedCategoryLink?: boolean;
+  isViewedRead?: boolean;
   clickCategory: (name: string) => void;
 };
 
-
-const PostsListItem = ( {image, title, description, category, isViewedCategoryLink = true, clickCategory} : Props) => {
+const PostsListItem = ({
+  id,
+  image,
+  title,
+  description,
+  category,
+  isViewedCategoryLink = true,
+  isViewedRead = true,
+  clickCategory,
+}: Props) => {
   const [likedCount, setLikedCount] = React.useState(0);
 
   const likeClick = () => {
-    setLikedCount(prevState => {
-
-      return prevState + 1
+    setLikedCount((prevState) => {
+      return prevState + 1;
     });
   };
 
@@ -37,20 +46,25 @@ const PostsListItem = ( {image, title, description, category, isViewedCategoryLi
         <CardContent>
           <div className="post-title">{title}</div>
           <div className="post-description">{description}</div>
-          { isViewedCategoryLink && 
-          <Link to={"/category"}>
-            {" "}
-            <button
-              className="post-category"
-              onClick={() => clickCategory(category)}
-            >
+          {isViewedCategoryLink && (
+            <Link to={"/category"}>
               {" "}
-              {category}{" "}
-            </button>{" "}
-          </Link> }
+              <button
+                className="post-category"
+                onClick={() => clickCategory(category)}
+              >
+                {" "}
+                {category}{" "}
+              </button>{" "}
+            </Link>
+          )}
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          {isViewedRead && (
+            <Link to={`../post/:${id}`}>
+              <Button size="small">Read More</Button>
+            </Link>
+          )}
           <IconButton aria-label="add to favorites" onClick={likeClick}>
             <FavoriteIcon />
           </IconButton>
