@@ -17,7 +17,7 @@ function App() {
     <>
       <Header clickCategory={clickCategory} />
       <Main categoryName= {categoryName} clickCategory = {clickCategory}/>
-      <Footer/>
+      <Footer clickCategory={clickCategory}/>
     </>
   );
 }

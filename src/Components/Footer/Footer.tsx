@@ -7,7 +7,11 @@ import QuickLinks from "./QuickLinks/QuiickLinks";
 import Newsletters from "./Newsletters/Newsletters";
 import FooterBar from "./FooterBar/FooterBar";
 
-function Footer() {
+type Props = {
+  clickCategory: (name: string) => void;
+};
+
+function Footer(props: Props ) {
   return (
     <footer className="footer">
       <div className="footer-info">
@@ -29,7 +33,7 @@ function Footer() {
           </Grid>
         </Container>
       </div>
-      <FooterBar/>
+      <FooterBar clickCategory={props.clickCategory}/>
     </footer>
   );
 }

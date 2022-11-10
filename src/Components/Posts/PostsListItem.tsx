@@ -61,7 +61,7 @@ const PostsListItem = ({
         </CardContent>
         <CardActions>
           {isViewedRead && (
-            <Link to={`../post/:${id}`}>
+            <Link to={`../post/:${id}`} style ={{textDecoration: "none"}} >
               <Button size="small">Read More</Button>
             </Link>
           )}
