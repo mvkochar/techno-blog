@@ -6,7 +6,7 @@ const MostPopular = () => {
         <div className="footer-popular">
             <div className="title">Most popular</div>
             <div className="footer-popular-item">
-              <Button>  <img src="./images/popular1.png" alt="popular1" /> </Button>
+              <Button>  <img src="../images/popular1.png" alt="popular1" /> </Button>
                 <div className="item-about">
                     <div className="item-about-title">
                        Board Wood Textures Pack 1 
@@ -17,7 +17,7 @@ const MostPopular = () => {
                 </div>
             </div>
             <div className="footer-popular-item">
-               <Button> <img src="./images/popular2.png" alt="popular2" /></Button>
+               <Button> <img src="../images/popular2.png" alt="popular2" /></Button>
                 <div className="item-about">
                     <div className="item-about-title">
                         Biker Widget Free UI PSD 
@@ -29,7 +29,7 @@ const MostPopular = () => {
             </div>
             
             <div className="footer-popular-item">
-                <Button><img src="./images/popular3.png" alt="popular2" /></Button>
+                <Button><img src="../images/popular3.png" alt="popular2" /></Button>
                 <div className="item-about">
                     <div className="item-about-title">
                         Free Beer Can PSDPack 1  
@@ -40,7 +40,7 @@ const MostPopular = () => {
                 </div>
             </div>
             <div className="footer-popular-item">
-                <Button> <img src="./images/popular4.png" alt="popular2" /></Button>
+                <Button> <img src="../images/popular4.png" alt="popular2" /></Button>
                 <div className="item-about">
                     <div className="item-about-title">
                         Finance Web UI Kit for Apps 
