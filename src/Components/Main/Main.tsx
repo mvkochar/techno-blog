@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../../pages/Home/Home";
 import Category from "../../pages/Category/Category";
 import Post from "../../pages/Post/Post";
+import Reviews from "../../pages/Reviews/Reviews";
 
 type Props = {
   isViewedCategoryLink?: boolean;
@@ -26,6 +27,7 @@ const Main = ({ categoryName, clickCategory }: Props) => {
         }
       />
      <Route path="post/:id" element={<Post clickCategory={clickCategory} />} />
+     <Route path = "reviews" element = {<Reviews/>}></Route>
     </Routes>
   );
 };

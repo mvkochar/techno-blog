@@ -51,6 +51,13 @@ const FooterBar = (props: Props) => {
              Global news
             </Button>
           </Link>
+          <Link to={"/reviews"} className={"footer-link"}>
+            <Button
+              sx={{ color: "#dddddd", textTransform: "none", fontSize: "13px" }}
+            >
+              Reviews
+            </Button>
+          </Link>
             </Toolbar>
       </Container>
     </AppBar>

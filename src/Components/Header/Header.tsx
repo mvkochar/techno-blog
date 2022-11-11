@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 type Props = {
   clickCategory: (name: string) => void;
-}
+};
 
 const Header = (props: Props) => {
   return (
@@ -21,29 +21,41 @@ const Header = (props: Props) => {
         <Container maxWidth="lg">
           <Toolbar>
             <HeaderLogo />
-            <Link to={"/"} className = "header-link">
+            <Link to={"/"} className="header-link">
               <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
                 Home
               </Button>
             </Link>
-            <Link to={"/category"} className = "header-link">
-              <Button onClick={()=> props.clickCategory("mobile news") } sx={{ color: "#2f3032", textTransform: "uppercase" }}>
+            <Link to={"/category"} className="header-link">
+              <Button
+                onClick={() => props.clickCategory("mobile news")}
+                sx={{ color: "#2f3032", textTransform: "uppercase" }}
+              >
                 mobile news
               </Button>
             </Link>
-            <Link to={"/category"} className = "header-link">
-              <Button onClick={()=> props.clickCategory("transport news") } sx={{ color: "#2f3032", textTransform: "uppercase" }}>
+            <Link to={"/category"} className="header-link">
+              <Button
+                onClick={() => props.clickCategory("transport news")}
+                sx={{ color: "#2f3032", textTransform: "uppercase" }}
+              >
                 transport news
               </Button>
             </Link>
-            <Link to={"/category"} className = "header-link">
-              <Button onClick={()=> props.clickCategory("global news") } sx={{ color: "#2f3032", textTransform: "uppercase" }}>
+            <Link to={"/category"} className="header-link">
+              <Button
+                onClick={() => props.clickCategory("global news")}
+                sx={{ color: "#2f3032", textTransform: "uppercase" }}
+              >
                 global news
               </Button>
             </Link>
-            <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
-              Contact us
-            </Button>
+
+            <Link to={"/reviews"} className="header-link">
+              <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
+                Reviews
+              </Button>
+            </Link>
           </Toolbar>
         </Container>
       </AppBar>

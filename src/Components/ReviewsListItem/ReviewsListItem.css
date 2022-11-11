@@ -1,0 +1,12 @@
+.review {
+  margin: "20px 0";
+}
+.review-name {
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 5px;
+  transition: box-shadow 0.5s ease-in-out;
+}
+.review:hover {
+  box-shadow: -1px 2px 4px 8px rgba(72, 56, 75, 0.85);
+}/*# sourceMappingURL=ReviewsListItem.css.map */
