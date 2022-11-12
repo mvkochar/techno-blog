@@ -1,0 +1,26 @@
+.review-form {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  text-align: center;
+  padding: 10px;
+  background-color: lightcyan;
+  border: 1px solid lightcyan;
+  border-radius: 4px;
+}
+
+.text {
+  background-color: white;
+  border: 1px solid white;
+  width: 60%;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.message {
+  width: 60%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 4px;
+  background-color: white;
+  border: 1px solid white;
+}/*# sourceMappingURL=ReviewsList.css.map */
