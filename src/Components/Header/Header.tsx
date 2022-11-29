@@ -50,7 +50,11 @@ const Header = (props: Props) => {
                 global news
               </Button>
             </Link>
-
+            <Link to={"/favourites"} className="header-link">
+              <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
+                Favourites
+              </Button>
+            </Link>
             <Link to={"/reviews"} className="header-link">
               <Button sx={{ color: "#2f3032", textTransform: "uppercase" }}>
                 Reviews

@@ -5,12 +5,12 @@ import PostsListItem from "../../Components/Posts/PostsListItem";
 
 
 type Props = {
-  
   clickCategory: (name: string) => void;
+  addFavouritePost : (postId: number) => void
 };
 
 const Post = ({
-  clickCategory,
+  clickCategory, addFavouritePost
 }: Props) => {
   const params = useParams();
 
@@ -32,6 +32,7 @@ const Post = ({
         isViewedCategoryLink={true}
         clickCategory={clickCategory}
         isViewedRead = {false}
+        addFavouritePost = {addFavouritePost}
       />
       </Container>
     </div>

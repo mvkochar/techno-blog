@@ -16,8 +16,12 @@ type Props = {
   title: string;
   description: string;
   category: string;
+  favouriteCount? : number; 
+  addFavouritePost : (postId: number) => void
   isViewedCategoryLink?: boolean;
   isViewedRead?: boolean;
+  isFavouritePrint?: boolean;
+
   clickCategory: (name: string) => void;
 };
 
@@ -27,16 +31,24 @@ const PostsListItem = ({
   title,
   description,
   category,
+  favouriteCount = 0,
+  addFavouritePost,
   isViewedCategoryLink = true,
   isViewedRead = true,
+  isFavouritePrint = true,
   clickCategory,
+
 }: Props) => {
   const [likedCount, setLikedCount] = React.useState(0);
 
   const likeClick = () => {
+    if(likedCount === 0) {
+      addFavouritePost(id)
+    }
     setLikedCount((prevState) => {
       return prevState + 1;
     });
+   
   };
 
   return (
@@ -65,10 +77,14 @@ const PostsListItem = ({
               <Button size="small">Read More</Button>
             </Link>
           )}
+          { isFavouritePrint && 
+          <>
           <IconButton aria-label="add to favorites" onClick={likeClick}>
             <FavoriteIcon />
           </IconButton>
           <Typography>{likedCount}</Typography>
+          </>
+        }
         </CardActions>
       </Card>
     </article>
