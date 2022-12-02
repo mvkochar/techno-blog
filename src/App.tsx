@@ -8,15 +8,17 @@ function App() {
   const [categoryName, setCategoryName] = React.useState("mobile news");
   const [favouritePosts, setFavouritePosts] = React.useState<number[]>([]);
 
+  //window.localStorage.clear()
+
   const clickCategory = (name: string) => {
     setCategoryName(name);
   };
 
   const addFavouritePost = (postId: number) => {
-    setFavouritePosts((prevState) => { return ( [...prevState, postId])});
-    
+    setFavouritePosts((prevState) => {
+      return [...prevState, postId];
+    });
   };
-
 
   return (
     <>

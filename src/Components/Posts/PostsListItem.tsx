@@ -42,17 +42,19 @@ const PostsListItem = ({
   isViewedComments = false
 
 }: Props) => {
-  const [likedCount, setLikedCount] = React.useState(0);
+
+  const oldLikedCount = window.localStorage.getItem(`FAVOURITE_POST_${id}`)
+  const [likedCount, setLikedCount] = React.useState(oldLikedCount ? +oldLikedCount : 0);
 
   const likeClick = () => {
     if(likedCount === 0) {
       addFavouritePost(id)
     }
     setLikedCount((prevState) => {
+      window.localStorage.setItem(`FAVOURITE_POST_${id}`, String(prevState + 1))
       return prevState + 1;
     });
-   
-  };
+   };
 
   return (
     <article>

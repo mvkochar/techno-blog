@@ -37,7 +37,7 @@ const Favourites = ({
           mt={4}
           mb={30}
         >
-          {PostsArray.filter((elem) => favouritePosts.includes(elem.id)).map(
+          {PostsArray.filter((elem) => window.localStorage.getItem(`FAVOURITE_POST_${elem.id}`)).map(
             (post) => (
               <Grid item xs={12} sm={6} md={4} key={post.id}>
                 <PostsListItem
@@ -55,6 +55,7 @@ const Favourites = ({
           )}
         </Grid>
       </Container>
+    
     </>
   );
 };
