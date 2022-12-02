@@ -9,20 +9,22 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import "./PostsListItem.css";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Comment } from "./PostsArray";
+import PostCommentsList from "./PostCommentsList";
 
 type Props = {
-  id: number;
-  image: string;
-  title: string;
-  description: string;
-  category: string;
-  favouriteCount? : number; 
+  id: number
+  image: string
+  title: string
+  description: string
+  category: string
   addFavouritePost : (postId: number) => void
-  isViewedCategoryLink?: boolean;
-  isViewedRead?: boolean;
-  isFavouritePrint?: boolean;
-
-  clickCategory: (name: string) => void;
+  isViewedCategoryLink?: boolean
+  isViewedRead?: boolean
+  isFavouritePrint?: boolean
+  clickCategory: (name: string) => void
+  comments?: Comment[]
+  isViewedComments?: boolean 
 };
 
 const PostsListItem = ({
@@ -31,12 +33,13 @@ const PostsListItem = ({
   title,
   description,
   category,
-  favouriteCount = 0,
   addFavouritePost,
   isViewedCategoryLink = true,
   isViewedRead = true,
   isFavouritePrint = true,
   clickCategory,
+  comments = [],
+  isViewedComments = false
 
 }: Props) => {
   const [likedCount, setLikedCount] = React.useState(0);
@@ -53,7 +56,7 @@ const PostsListItem = ({
 
   return (
     <article>
-      <Card className="post">
+      <Card className= { isViewedComments ? "post post-center" : "post"}>
         <CardMedia component="img" image={image} alt={title} />
         <CardContent>
           <div className="post-title">{title}</div>
@@ -87,6 +90,7 @@ const PostsListItem = ({
         }
         </CardActions>
       </Card>
+      {isViewedComments && <PostCommentsList comments={comments}/>}
     </article>
   );
 };

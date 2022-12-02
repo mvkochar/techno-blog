@@ -17,6 +17,7 @@ function App() {
     
   };
 
+
   return (
     <>
       <Header clickCategory={clickCategory} />
@@ -25,7 +26,6 @@ function App() {
         favouritePosts={favouritePosts}
         clickCategory={clickCategory}
         addFavouritePost={addFavouritePost}
-        favouriteCount={favouritePosts.length}
       />
       <Footer clickCategory={clickCategory} />
     </>

@@ -12,7 +12,6 @@ type Props = {
   clickCategory: (name: string) => void;
   addFavouritePost: (postId: number) => void;
   favouritePosts: number[];
-  favouriteCount: number
 };
 
 const Main = ({
@@ -20,7 +19,6 @@ const Main = ({
   clickCategory,
   addFavouritePost,
   favouritePosts,
-  favouriteCount
 }: Props) => {
   return (
     <Routes>
@@ -31,7 +29,6 @@ const Main = ({
             clickCategory={clickCategory}
             categoryName={categoryName}
             addFavouritePost={addFavouritePost}
-            favouriteCount={favouriteCount}
           />
         }
       />

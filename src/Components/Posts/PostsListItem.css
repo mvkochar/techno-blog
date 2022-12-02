@@ -1,6 +1,9 @@
 .post {
   max-width: 349px;
 }
+.post-center {
+  margin: 0 auto;
+}
 .post-title {
   margin-top: 22px;
   font-family: "Roboto", sans-serif;
@@ -19,4 +22,17 @@
   margin-top: 16px;
   color: cadetblue;
   cursor: pointer;
+}
+.post-comment {
+  border: 1px solid lightblue;
+  padding: 15px;
+}
+.post-comment-text {
+  font-size: 16px;
+  text-align: left;
+}
+.post-comment-author {
+  margin-top: 20px;
+  font-size: 14px;
+  font-style: italic;
 }/*# sourceMappingURL=PostsListItem.css.map */
