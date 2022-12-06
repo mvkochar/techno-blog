@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import "./PostsListItem.css";
-import { Typography } from "@mui/material";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Link } from "react-router-dom";
 import { Comment } from "./PostsArray";
 import PostCommentsList from "./PostCommentsList";
@@ -43,17 +43,27 @@ const PostsListItem = ({
 
 }: Props) => {
 
-  const oldLikedCount = window.localStorage.getItem(`FAVOURITE_POST_${id}`)
-  const [likedCount, setLikedCount] = React.useState(oldLikedCount ? +oldLikedCount : 0);
+  let oldLikedState : number;
+  if(window.localStorage.getItem(`FAVOURITE_POST_${id}`) !== null ) {
+     oldLikedState = 1
+  } 
+  else {
+    oldLikedState = 0
+  }  
+
+  const [likedState, setLikedState] = React.useState(oldLikedState);
 
   const likeClick = () => {
-    if(likedCount === 0) {
-      addFavouritePost(id)
+    console.log(likedState)
+    if(likedState === 1) {
+      setLikedState(0)
+      window.localStorage.removeItem(`FAVOURITE_POST_${id}`)
     }
-    setLikedCount((prevState) => {
-      window.localStorage.setItem(`FAVOURITE_POST_${id}`, String(prevState + 1))
-      return prevState + 1;
-    });
+    else {
+      setLikedState(1)
+      window.localStorage.setItem(`FAVOURITE_POST_${id}`, "1")
+    }
+   
    };
 
   return (
@@ -85,9 +95,9 @@ const PostsListItem = ({
           { isFavouritePrint && 
           <>
           <IconButton aria-label="add to favorites" onClick={likeClick}>
-            <FavoriteIcon />
+           { likedState ? <FavoriteIcon /> : <FavoriteBorderIcon/>}
           </IconButton>
-          <Typography>{likedCount}</Typography>
+
           </>
         }
         </CardActions>
