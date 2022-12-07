@@ -4,16 +4,11 @@ import PostsArray from "../../Components/Posts/PostsArray";
 import PostsListItem from "../../Components/Posts/PostsListItem";
 
 type FavouritesProps = {
-  favouritePosts: number[];
   clickCategory: (name: string) => void;
-  addFavouritePost: (postId: number) => void;
-
 };
 
 const Favourites = ({
-  favouritePosts,
-  clickCategory,
-  addFavouritePost,
+  clickCategory
 }: FavouritesProps) => {
   return (
     <>
@@ -47,7 +42,6 @@ const Favourites = ({
                   title={post.title}
                   description={post.description}
                   category={post.category}
-                  addFavouritePost={addFavouritePost}
                   isFavouritePrint = {false}
                 />
               </Grid>

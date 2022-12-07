@@ -18,7 +18,6 @@ type Props = {
   title: string
   description: string
   category: string
-  addFavouritePost : (postId: number) => void
   isViewedCategoryLink?: boolean
   isViewedRead?: boolean
   isFavouritePrint?: boolean
@@ -33,7 +32,6 @@ const PostsListItem = ({
   title,
   description,
   category,
-  addFavouritePost,
   isViewedCategoryLink = true,
   isViewedRead = true,
   isFavouritePrint = true,

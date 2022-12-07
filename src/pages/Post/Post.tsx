@@ -5,10 +5,10 @@ import PostsListItem from "../../Components/Posts/PostsListItem";
 
 type Props = {
   clickCategory: (name: string) => void;
-  addFavouritePost: (postId: number) => void;
+
 };
 
-const Post = ({ clickCategory, addFavouritePost }: Props) => {
+const Post = ({ clickCategory}: Props) => {
   const params = useParams();
   const postId = Number(params.id?.slice(1));
   const post = PostsArray[postId - 1];
@@ -25,7 +25,6 @@ const Post = ({ clickCategory, addFavouritePost }: Props) => {
           isViewedCategoryLink={true}
           clickCategory={clickCategory}
           isViewedRead={false}
-          addFavouritePost={addFavouritePost}
           comments={post.comments}
           isViewedComments = {true}
           isFavouritePrint = {false}

@@ -5,12 +5,11 @@ import PostsArray from "./PostsArray";
 
 type Props = {
   clickCategory: (name: string) => void
-  addFavouritePost : (postId: number) => void
 }
 
 
 
-const PostsList = ({clickCategory, addFavouritePost} : Props) => {
+const PostsList = ({clickCategory} : Props) => {
  
   return (
     <>
@@ -34,7 +33,6 @@ const PostsList = ({clickCategory, addFavouritePost} : Props) => {
                 title={post.title}
                 description={post.description}
                 category={post.category}
-                addFavouritePost = {addFavouritePost}
               />
             </Grid>
         

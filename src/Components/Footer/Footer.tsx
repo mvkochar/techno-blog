@@ -14,7 +14,7 @@ type Props = {
 function Footer(props: Props ) {
   return (
     <footer className="footer">
-      <div className="footer-info">
+    <div className="footer-info">
         <Container maxWidth="lg">
           <Grid container spacing={7}>
             <Grid item maxWidth={204}>
@@ -32,7 +32,7 @@ function Footer(props: Props ) {
             </Grid>
           </Grid>
         </Container>
-      </div>
+   </div>
       <FooterBar clickCategory={props.clickCategory}/>
     </footer>
   );

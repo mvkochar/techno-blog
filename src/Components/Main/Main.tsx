@@ -10,15 +10,11 @@ type Props = {
   isViewedCategoryLink?: boolean;
   categoryName: string;
   clickCategory: (name: string) => void;
-  addFavouritePost: (postId: number) => void;
-  favouritePosts: number[];
 };
 
 const Main = ({
   categoryName,
   clickCategory,
-  addFavouritePost,
-  favouritePosts,
 }: Props) => {
   return (
     <Routes>
@@ -28,7 +24,6 @@ const Main = ({
           <Home
             clickCategory={clickCategory}
             categoryName={categoryName}
-            addFavouritePost={addFavouritePost}
           />
         }
       />
@@ -38,7 +33,6 @@ const Main = ({
           <Category
             categoryName={categoryName}
             clickCategory={clickCategory}
-            addFavouritePost={addFavouritePost}
           />
         }
       />
@@ -47,7 +41,6 @@ const Main = ({
         element={
           <Post
             clickCategory={clickCategory}
-            addFavouritePost={addFavouritePost}
           />
         }
       />
@@ -56,9 +49,7 @@ const Main = ({
         path="favourites"
         element={
           <Favourites
-            favouritePosts={favouritePosts}
             clickCategory={clickCategory}
-            addFavouritePost={addFavouritePost}
           />
         }
       />

@@ -1,8 +1,9 @@
-import react from "react";
+import React from "react";
 import { Container, Link } from "@mui/material";
 
 const SocialSearch = () => {
-  let now = new Date();
+
+  const date = new Date().toUTCString();
   return (
     <div className="header-social">
         <div className="header-social-media">
@@ -37,7 +38,7 @@ const SocialSearch = () => {
             </Link>
           </div>
         </div>
-        <div className="header-social-date">{`${now.toUTCString()}`}</div>
+        <div className="header-social-date">{date}</div>
         <form className="header-social-search">
           <input type="text" name="search" placeholder="Search" />
           <input type="submit" name="searchBtn" value="" />

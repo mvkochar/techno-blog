@@ -6,7 +6,6 @@ import Slider from "../../Components/Slider/Slider";
 type Props = {
   clickCategory: (name: string) => void;
   categoryName: string;
-  addFavouritePost : (postId: number) => void
 };
 
 
@@ -17,12 +16,10 @@ const Home = (props: Props) => {
     <>
      
       <Slider />
-      <main>S
+      <main>
         <Container maxWidth="lg">
           <PostsList
             clickCategory={props.clickCategory}
-            addFavouritePost={props.addFavouritePost}
-    
           />
         </Container>
   

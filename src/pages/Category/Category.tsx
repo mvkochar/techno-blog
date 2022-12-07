@@ -7,7 +7,6 @@ type Props = {
   
   categoryName: string;
   clickCategory: (name: string) => void;
-  addFavouritePost : (postId: number) => void
 };
 
 const Category = (props: Props) => {
@@ -44,7 +43,6 @@ const Category = (props: Props) => {
                 title={post.title}
                 description={post.description}
                 category={post.category}
-                addFavouritePost = {props.addFavouritePost}
                 isFavouritePrint = {false}
               />
             </Grid>
